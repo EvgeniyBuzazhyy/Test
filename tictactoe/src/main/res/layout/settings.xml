@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:clipChildren="false"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/settings_back"
+                    android:onClick="onClick"
+                    android:layout_alignBottom="@+id/text"
+                    android:layout_alignRight="@+id/frameLayout2"
+                    android:layout_alignEnd="@+id/frameLayout2"
+                    android:background="@drawable/background_settings"
+                    android:src="@drawable/ic_arrow_back_black_48dp_1x"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_title"
+                    android:id="@+id/settings"
+                    android:layout_gravity="center"
+                    android:textSize="24dp"
+                    android:textColor="#ff000000" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#ff000000" >
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/imageView21"
+                    android:src="@drawable/ic_audiotrack_black_48dp_1x"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_music"
+                    android:id="@+id/textView7"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="15dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox_music"
+                    android:onClick="onClick"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/imageView22"
+                android:src="@drawable/ic_volume_up_black_24dp"
+                android:layout_gravity="left|center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_sounds"
+                android:id="@+id/textView8"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="60dp"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_sounds"
+                android:onClick="onClick"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/imageView20"
+                android:src="@drawable/ic_stay_current_portrait_black_48dp"
+                android:layout_gravity="left|center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_welcome_screen"
+                android:id="@+id/textView5"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="60dp"
+                android:textSize="15dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_welcomeScreen"
+                android:onClick="onClick"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff000000"
+            android:layout_marginTop="5dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButtonlevelOne"
+                        android:checked="false"
+                        android:text="@string/level_one"
+                        android:onClick="onClick"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/level_two"
+                        android:id="@+id/radioButtonlevelTwo"
+                        android:onClick="onClick"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/level_three"
+                        android:id="@+id/radioButtonlevelThree"
+                        android:onClick="onClick"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>
