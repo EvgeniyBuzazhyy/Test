@@ -1,6 +1,0 @@
-<!-- res/drawable/button_off.xml -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="#c825acff" />
-    <corners android:radius="5dp" />
-</shape>
